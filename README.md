@@ -98,15 +98,6 @@ src/
 ├── types/
 ├── constants/
 
-docs/
-├── DESIGN_SYSTEM.md
-├── UI_STANDARDS.md
-├── ANIMATION_GUIDELINES.md
-├── PROMPT_GUIDELINES.md
-├── PROJECT_STRUCTURE.md
-```
-
----
 
 # Repository Rules
 

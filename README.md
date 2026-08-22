@@ -12,7 +12,7 @@ It is a **Master Frontend Foundation** designed with a single goal:
 
 > **Build once. Reuse everywhere.**
 
-Any future web application — SaaS, AI agent platform, e-commerce, CRM, fintech, healthcare, portfolio, agency, marketing landing page, or internal dashboard — can be initialized directly from this foundation.
+Any future web application — SaaS, AI agent platform, e-commerce, CRM, fintech, healthcare, portfolio, agency, marketing landing page, or internal dashboard — can be initialized directly from this foundation using the **[Project Generation Guide](file:///c:/Users/ro224/OneDrive/Desktop/cluade%20Packages/PROJECT_GENERATION_GUIDE.md)**.
 
 ---
 
@@ -29,9 +29,9 @@ cluade Packages/
 │   ├── providers.tsx                 <-- Theme, TanStack Query, Sonner Toast Providers
 │   └── globals.css                   <-- CSS Variables & Design Tokens (Light/Dark/System)
 ├── components/
-│   ├── ui/                           <-- Core Primitives (Button, Input, Card, Badge, Switch, Dialog, Select, Dropdown, Skeleton, Tabs, Accordion, Tooltip, Avatar, Separator, Toast, etc.)
-│   ├── layout/                       <-- Layout Primitives (Navbar, Sidebar, Topbar, Footer, PageHeader, PageContainer, SplitLayout)
-│   ├── navigation/                   <-- Navigation (Breadcrumbs, MobileDrawer, Pagination)
+│   ├── ui/                           <-- 24 Core Primitives (Button, Input, Select, Checkbox, RadioGroup, Dialog, Popover, Command, Toast, etc.)
+│   ├── layout/                       <-- 8 Layout Primitives (Navbar, Sidebar, Topbar, Footer, DashboardLayout, SplitLayout, PageHeader, PageContainer)
+│   ├── navigation/                   <-- 3 Nav Systems (Breadcrumbs, MobileDrawer, Pagination)
 │   ├── forms/                        <-- React Hook Form + Zod Form Field Wrappers
 │   ├── tables/                       <-- TanStack Table Integration with Sorting & Filtering
 │   ├── charts/                       <-- Recharts Components & KPI Cards
@@ -51,6 +51,7 @@ cluade Packages/
 │   ├── theme.ts                      <-- Theme Tokens & Radius Config
 │   ├── navigation.ts                 <-- Navigation Link Hierarchies
 │   └── features.ts                   <-- Feature Flags & Toggles
+├── PROJECT_GENERATION_GUIDE.md       <-- Master Workflow & Reusable Prompt Template
 ├── tailwind.config.js                <-- Tailwind CSS Configuration with HSL Color Tokens
 ├── tsconfig.json                     <-- Strict TypeScript Config with Path Aliases (@/*)
 └── README.md                         <-- Master Documentation
@@ -76,13 +77,12 @@ cluade Packages/
 
 ## 🚀 How to Use This Foundation for a New Project
 
-1. **Clone / Initialize this repository** as your project base.
-2. **Consult the AI Design Skill**:
-   Use `.claude/skills/ui-ux-pro-max` to select the color palette, typography, layout pattern, and animations tailored to your target industry.
-3. **Customize `config/site.ts`**:
-   Update `name`, `description`, and `links` without touching core components.
-4. **Build your pages**:
-   Compose pages using the reusable primitives from `@/components/ui/`, `@/components/layout/`, `@/components/forms/`, `@/components/tables/`, `@/components/charts/`, and `@/components/ai/`.
+To create a new application from this master foundation:
+
+1. Follow the **[Project Generation Guide](file:///c:/Users/ro224/OneDrive/Desktop/cluade%20Packages/PROJECT_GENERATION_GUIDE.md)**.
+2. Use the **Master Project Prompt Template** included in the guide to define your project requirements.
+3. Consult `.claude/skills/ui-ux-pro-max` for design system recommendations.
+4. Compose pages using the modular foundation primitives in `@/components/`.
 
 ---
 
@@ -97,7 +97,10 @@ npm install
 # 2. Run TypeScript strict type-checking
 npx tsc --noEmit
 
-# 3. Create production build
+# 3. Run ESLint check
+npm run lint
+
+# 4. Create production build
 npm run build
 ```
 
